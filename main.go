@@ -39,7 +39,7 @@ var (
 				proxyURL.Path = proxyURL.Path[7:]
 				err := proxyTo(proxyURL.String(), w)
 				if err != nil {
-					log.Printf("error grabbing server list: %v", err)
+					log.Printf("error proxying update request: %v", err)
 					w.WriteHeader(500)
 					return
 				}
