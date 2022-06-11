@@ -41,8 +41,8 @@ var (
 				if err != nil {
 					log.Printf("error proxying update request: %v", err)
 					w.WriteHeader(500)
-					return
 				}
+				return
 			}
 
 			switch r.URL.Path {
